@@ -1,7 +1,7 @@
 // import 'package:beanbuzz/Screens/authentication/login/login_home.dart';
 import 'package:beanbuzz/widgets/bottomNavigationBar.dart';
 import 'package:flutter/material.dart';
-// import 'Screens/homepage.dart';
+import 'Screens/homepage.dart';
 import 'Themes/mytheme.dart';
 
 void main() {

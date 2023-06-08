@@ -1,5 +1,5 @@
 // import 'package:beanbuzz/Screens/allProducts.dart';
-import 'package:beanbuzz/Screens/home/itemList.dart';
+// import 'package:beanbuzz/Screens/home/itemList.dart';
 import 'package:beanbuzz/widgets/bottomNavigationBar.dart';
 import 'package:beanbuzz/widgets/card.dart';
 import 'package:beanbuzz/Themes/colors.dart';
@@ -155,60 +155,50 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.MyThemeColorbackground,
-        body: Container(
-          child: SingleChildScrollView(
-              child: Column(
-            children: [
-              // search bar
-              searchbar(hintText: 'Search Any Thing'),
-              // categories
-              category(),
-              // Products
+      backgroundColor: AppColors.MyThemeColorbackground,
+      body: Container(
+          child: ListView(
+        children: [
+          // search bar
+          searchbar(hintText: 'Search Any Thing'),
+          // categories
+          category(),
+          // Products
 
-              Center(
-                child: SizedBox(
-                  height: 330,
-                  child: ListView(
-                    controller: scrollController,
-                    scrollDirection: Axis.horizontal,
-                    children: products.map((products) {
-                      return Carad(
-                          text: products["name"] as String,
-                          imageUrl: products["img"],
-                          subtitle: products["desc"] as String);
-                    }).toList(),
-                  ),
-                ),
+          Center(
+            child: SizedBox(
+              height: 330,
+              child: ListView(
+                controller: scrollController,
+                scrollDirection: Axis.horizontal,
+                children: products.map((products) {
+                  return Carad(
+                      text: products["name"] as String,
+                      imageUrl: products["img"],
+                      subtitle: products["desc"] as String);
+                }).toList(),
               ),
-              Center(
-                child: ScrollIndicator(
-                  scrollController: scrollController,
-                  width: 100,
-                  height: 5,
-                  indicatorWidth: 20,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: AppColors.MyThemeColorbackground),
-                  indicatorDecoration: BoxDecoration(
-                      color: AppColors.MyThemePrimaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-              ),
-              // ListView(
-              //   controller: scrollController,
-              //   scrollDirection: Axis.vertical,
-              //   children: itemList.map((itemList) {
-              //     return ProductList(
-              //         title: itemList["title"] as String,
-              //         subtitle: itemList["subtitle"] as String,
-              //         profileImgUrl: itemList["img"]);
-              //   }).toList(),
-              // ),
-              bottomNavBar(),
-            ],
-          )),
-        ));
+            ),
+          ),
+          Center(
+            child: ScrollIndicator(
+              scrollController: scrollController,
+              width: 100,
+              height: 5,
+              indicatorWidth: 20,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: AppColors.MyThemeColorbackground),
+              indicatorDecoration: BoxDecoration(
+                  color: AppColors.MyThemePrimaryColor,
+                  borderRadius: BorderRadius.circular(10)),
+            ),
+          ),
+         
+          bottomNavBar(),
+        ],
+      )),
+    );
   }
 }
