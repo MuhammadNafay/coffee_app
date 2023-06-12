@@ -37,8 +37,37 @@ class _SignUpState extends State<SignUp> {
                 const Padding(
                   padding: EdgeInsets.only(top: 12.0),
                   child: Text(
-                    "Hello let's login to your account",
+                    "Hello let's Create your account",
                     style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width >= 1000
+                        ? 800
+                        : MediaQuery.of(context).size.width / 0.5,
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.MyThemePrimaryColor)),
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.MyThemePrimaryColor,
+                                    width: 2)),
+                            labelText: 'Enter your Name',
+                            labelStyle:
+                                TextStyle(color: AppColors.MyThemePrimaryColor),
+                            prefixIcon: Icon(
+                              Icons.email_rounded,
+                              color: AppColors.MyThemePrimaryColor,
+                            )),
+                      ),
+                    ),
                   ),
                 ),
                 Padding(
@@ -71,6 +100,35 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width >= 1000
+                        ? 800
+                        : MediaQuery.of(context).size.width / 0.5,
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.MyThemePrimaryColor)),
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.MyThemePrimaryColor,
+                                    width: 2)),
+                            labelText: 'Enter your password',
+                            labelStyle:
+                                TextStyle(color: AppColors.MyThemePrimaryColor),
+                            prefixIcon: Icon(
+                              Icons.email_rounded,
+                              color: AppColors.MyThemePrimaryColor,
+                            )),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.only(top: 15.0),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width >= 1000
@@ -88,7 +146,7 @@ class _SignUpState extends State<SignUp> {
                                 borderSide: BorderSide(
                                     color: AppColors.MyThemePrimaryColor,
                                     width: 2)),
-                            labelText: 'Enter your Password',
+                            labelText: 'Re-Enter your Password',
                             labelStyle:
                                 TextStyle(color: AppColors.MyThemePrimaryColor),
                             prefixIcon: Icon(
