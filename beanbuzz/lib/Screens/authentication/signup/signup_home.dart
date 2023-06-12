@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:beanbuzz/Themes/colors.dart';
 import 'package:beanbuzz/widgets/bottomNavigationBar.dart';
+import 'package:beanbuzz/Screens/authentication/login/login_home.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -189,21 +190,21 @@ class _SignUpState extends State<SignUp> {
                                     builder: (context) => bottomNavBar()));
                           },
                           child: const Text(
-                            "Sign In",
+                            "Sign up",
                             style: TextStyle(
                                 color: Color(0xffffffff), fontSize: 16),
                           ))),
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  const Text('Dont have an account? Dont Worry:'),
+                  const Text('You have an account?'),
                   TextButton(
                     child: const Text(
-                      'Sign Up',
+                      'Login',
                       style: TextStyle(fontFamily: 'Pacifico'),
                     ),
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignUp()));
+                          MaterialPageRoute(builder: (context) => Login()));
                     },
                   ),
                 ])
