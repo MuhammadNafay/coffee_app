@@ -30,32 +30,6 @@ class _bottomNavBarState extends State<bottomNavBar> {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.MyThemeColorbackground,
-        elevation: 0,
-        centerTitle: true,
-        actions: const [
-          Icon(
-            Icons.notifications_outlined,
-            color: AppColors.MyThemePrimaryColor,
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          CircleAvatar(
-            radius: 20,
-            child: ClipOval(
-              child: Image(
-                  image: NetworkImage(
-                'assets/images/profile.jpg',
-              )),
-            ),
-          ),
-          SizedBox(
-            width: 10,
-          )
-        ],
-      ),
       body: screens[index],
       bottomNavigationBar: Theme(
         data: Theme.of(context)
